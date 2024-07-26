@@ -28,10 +28,12 @@ jobs:
     - name: Build docker image
       run: |
         docker build -t beacsn/docker-graphql:0.0.2 .
+        docker build -t beacsn/docker-graphql:latest .
 
     - name: Push docker image
       run: |
         docker push beacsn/docker-graphql:0.0.2
+        docker push beacsn/docker-graphql:latest
 
     
     # - name: Build the Docker image
